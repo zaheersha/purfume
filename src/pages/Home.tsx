@@ -1,0 +1,156 @@
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { featuredPerfumes, newArrivals } from "@/lib/data";
+import { PerfumeCard } from "@/components/PerfumeCard";
+import heroImg from "../assets/images/IMG2.jpg";
+import { ArrowRight } from "lucide-react";
+import Testimonials from "@/components/Testimonials";
+import FloatingActions from "@/components/FloatingActions";
+import DiscountPopup from "@/components/DiscountPopup";
+
+
+export default function Home() {
+  return (
+    <div className="flex flex-col gap-24">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={"https://png.pngtree.com/thumb_back/fw800/background/20231020/pngtree-natural-perfume-essence-embracing-nature-s-fragrance-against-dark-textured-backdrop-image_13684960.png"} 
+            alt="Rare Pheromone Luxury Collection" 
+            className="w-full h-full object-cover scale-110 blur-[2px] opacity-40 md:opacity-100 md:blur-0 md:scale-100 transition-all duration-1000"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        </div>
+        
+        <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl animate-in fade-in slide-in-from-left-12 duration-1000">
+            <Badge className="mb-6 py-1.5 px-4 bg-primary/10 text-primary hover:bg-primary/20 border-none tracking-[0.2em] uppercase text-[10px] font-bold">
+              Premium Collection 2026
+            </Badge>
+            <h1 className="text-6xl md:text-8xl font-serif text-foreground leading-[0.95] mb-8 tracking-tighter">
+              The Secret <br />
+              <span className="text-primary italic font-light">Language</span> <br />
+              of Scent
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 font-light leading-relaxed max-w-lg">
+              Unlock the power of pheromones with our signature fragrances. Crafted in small batches to ensure absolute perfection.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <Link href="/categories">
+                <Button className="h-16 px-10 text-base bg-foreground text-background hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-widest uppercase font-semibold w-full sm:w-auto rounded-none shadow-2xl">
+                  Shop Collection
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button variant="outline" className="h-16 px-10 text-base border-border text-foreground hover:bg-foreground hover:text-background transition-all duration-300 tracking-widest uppercase font-semibold w-all sm:w-auto rounded-none">
+                  Discover RARE PHEROMONE
+
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        
+        {/* Decorative elements */}
+        <div className="absolute bottom-12 right-12 hidden lg:block animate-in fade-in slide-in-from-right-12 duration-1000 delay-500">
+          <div className="flex items-center gap-6">
+            <div className="h-[1px] w-24 bg-primary/30" />
+            <p className="text-[10px] tracking-[0.4em] uppercase font-bold text-primary/60 vertical-text py-4">Est. 2026</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Section */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-end mb-12">
+          <div>
+            <h2 className="text-sm font-semibold tracking-[0.2em] text-primary uppercase mb-2">Signature Scents</h2>
+            <h3 className="text-3xl md:text-4xl font-serif">Featured Collection</h3>
+          </div>
+          <Link href="/categories" className="hidden sm:flex items-center text-sm font-medium hover:text-primary transition-colors">
+            View All <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredPerfumes.map(perfume => (
+            <PerfumeCard key={perfume.id} perfume={perfume} />
+          ))}
+        </div>
+        
+        <div className="mt-8 sm:hidden">
+          <Link href="/categories">
+            <Button variant="outline" className="w-full">View All Collection</Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Philosophy Banner */}
+      <section className="bg-foreground text-background py-24 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-8">
+            "A perfume is like a piece of clothing, a message, a way of presenting oneself, a costume that differs according to the woman who wears it."
+          </h2>
+          <p className="text-primary/80 tracking-widest uppercase text-sm font-medium">Paloma Picasso</p>
+        </div>
+      </section>
+
+      {/* New Arrivals Section */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-sm font-semibold tracking-[0.2em] text-primary uppercase mb-2">Just Landed</h2>
+          <h3 className="text-3xl md:text-4xl font-serif mb-4">New Arrivals</h3>
+          <p className="text-muted-foreground font-light">
+            Be the first to experience our latest fragrance creations, meticulously crafted for the new season.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {newArrivals.map(perfume => (
+            <PerfumeCard key={perfume.id} perfume={perfume} />
+          ))}
+        </div>
+
+
+        <div className="mt-24 bg-secondary/30 border border-border/50 rounded-lg p-10 text-center">
+  <h2 className="font-serif text-3xl mb-6">The Rare Experience</h2>
+  <p className="text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
+    From minimalist packaging to carefully curated scent profiles, every detail is
+    designed to create a luxurious unboxing and wearing experience. Rare Pheromone
+    isn't just a perfume — it's a statement of style and individuality.
+  </p>
+</div>
+
+<FloatingActions />
+<DiscountPopup />
+<Testimonials />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+
+
+
+
+    </div>
+  );
+}
