@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-24">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-   <img 
-  src={heroImg} 
-  alt="Rare Pheromone Luxury Collection" 
-  className="w-full h-full object-cover object-right brightness-100 contrast-110 md:scale-100 transition-all duration-1000"
-/>
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-        </div>
+    <section className="relative min-h-[75vh] md:min-h-[90vh] flex items-center overflow-hidden">
+  <div className="absolute inset-0 z-0">
+    <img 
+      src={heroImg} 
+      alt="Rare Pheromone Luxury Collection" 
+      className="w-full h-full object-cover object-center md:object-right brightness-100 contrast-110 transition-all duration-1000"
+    />
+<div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r 
+from-background via-background/95 md:via-background/60 to-background/40 md:to-transparent" />  </div>
         
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl animate-in fade-in slide-in-from-left-12 duration-1000">
@@ -38,18 +38,36 @@ export default function Home() {
               Unlock the power of pheromones with our signature fragrances. Crafted in small batches to ensure absolute perfection.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
-              <Link href="/categories">
-                <Button className="h-16 px-10 text-base bg-foreground text-background hover:bg-primary hover:text-primary-foreground transition-all duration-300 tracking-widest uppercase font-semibold w-full sm:w-auto rounded-none shadow-2xl">
-                  Shop Collection
-                </Button>
-              </Link>
-              <Link href="/about">
-                <Button variant="outline" className="h-16 px-10 text-base border-border text-foreground hover:bg-foreground hover:text-background transition-all duration-300 tracking-widest uppercase font-semibold w-all sm:w-auto rounded-none">
-                  Discover RARE PHEROMONE
+      <div className="flex flex-col gap-4 sm:flex-row w-full max-w-md">
 
-                </Button>
-              </Link>
+  <Link href="/categories" className="w-full">
+    <Button className="h-14 md:h-16 w-full text-sm md:text-base 
+    bg-foreground text-background 
+    hover:bg-primary hover:text-primary-foreground 
+    transition-all duration-300 
+    tracking-widest uppercase font-semibold 
+    rounded-none shadow-xl">
+      Shop Collection
+    </Button>
+  </Link>
+
+  <Link href="/about" className="w-full">
+    <Button 
+      variant="outline"
+      className="h-14 md:h-16 w-full text-sm md:text-base 
+      border-border text-foreground 
+      hover:bg-foreground hover:text-background 
+      transition-all duration-300 
+      tracking-widest uppercase font-semibold 
+      rounded-none">
+      Discover Rare Pheromone
+    </Button>
+  </Link>
+
+</div>
             </div>
+            <br />
+
           </div>
         </div>
         
@@ -61,7 +79,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+<br />
       {/* Featured Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
