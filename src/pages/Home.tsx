@@ -66,8 +66,6 @@ from-background via-background/95 md:via-background/60 to-background/40 md:to-tr
 
 </div>
             </div>
-            <br />
-
           </div>
         </div>
         
@@ -79,7 +77,6 @@ from-background via-background/95 md:via-background/60 to-background/40 md:to-tr
           </div>
         </div>
       </section>
-<br />
       {/* Featured Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
