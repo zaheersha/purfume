@@ -12,14 +12,37 @@ export default function Contact() {
 
   
   return (
+
+    <div>
+
+
+
+      <section
+  className="relative w-full h-[70vh] md:h-screen bg-cover bg-center flex items-center justify-center"
+  style={{
+    backgroundImage: "url('/contact.png')"
+  }}
+>
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-6">
+    <h1 className="font-serif text-3xl md:text-5xl text-white mb-6">
+      Contact Us
+    </h1>
+
+    <p className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
+      Whether you need assistance choosing a fragrance or have a question
+      about your order, our dedicated team is here to help.
+    </p>
+  </div>
+</section>
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 animate-in fade-in duration-500">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="font-serif text-4xl md:text-5xl mb-6">Contact Us</h1>
-          <p className="text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            Whether you need assistance choosing a fragrance or have a question about your order, our dedicated team is here to help.
-          </p>
-        </div>
+
+        
+  
 <FloatingActions />
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -78,6 +101,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

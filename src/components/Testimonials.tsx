@@ -6,7 +6,7 @@ const testimonials = [
     rating: 5,
     ratingText: "Excellent",
     image:
-      "https://media.licdn.com/dms/image/v2/D5635AQHhdIDFz_F0ZQ/profile-framedphoto-shrink_200_200/B56ZdKbS6iH8Ac-/0/1749300359152?e=1772298000&v=beta&t=VWrHWuxmmoKMmDOm9XXuEScbb1nB_1PZwc-IQunZL3U",
+      "https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png",
     feedback:
       "Absolutely luxurious! The fragrance lasts all day and feels incredibly premium. I receive compliments everywhere I go.",
   },
@@ -15,7 +15,7 @@ const testimonials = [
     rating: 4,
     ratingText: "Very Good",
     image:
-      "https://media.licdn.com/dms/image/v2/D5635AQHhdIDFz_F0ZQ/profile-framedphoto-shrink_200_200/B56ZdKbS6iH8Ac-/0/1749300359152?e=1772298000&v=beta&t=VWrHWuxmmoKMmDOm9XXuEScbb1nB_1PZwc-IQunZL3U",
+      "https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png",
     feedback:
       "Rare Bloom is elegant and soft. Long-lasting and beautifully balanced.",
   },
@@ -24,7 +24,7 @@ const testimonials = [
     rating: 5,
     ratingText: "Premium Quality",
     image:
-      "https://media.licdn.com/dms/image/v2/D5635AQHhdIDFz_F0ZQ/profile-framedphoto-shrink_200_200/B56ZdKbS6iH8Ac-/0/1749300359152?e=1772298000&v=beta&t=VWrHWuxmmoKMmDOm9XXuEScbb1nB_1PZwc-IQunZL3U",
+      "https://www.kindpng.com/picc/m/252-2524695_dummy-profile-image-jpg-hd-png-download.png",
     feedback:
       "Packaging, scent and overall experience feels very premium. Highly recommended.",
   },

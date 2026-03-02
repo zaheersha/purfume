@@ -1,22 +1,38 @@
-import heroImg from "../assets/images/hero.png";
+// import heroImg from "../assets/images/hero.png";
 import logoImg from "../assets/images/logo.png";
 import FloatingActions from "@/components/FloatingActions";
 
+import Image from "../assets/images/bg2.png";
+import heroImg from "../assets/images/image3.png";
 
 export default function About() {
   return (
     <div className="animate-in fade-in duration-700">
 
             {/* Philosophy Banner */}
-      <section className="bg-foreground text-background py-24 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-8">
-            "A perfume is like a piece of clothing, a message, a way of presenting oneself, a costume that differs according to the woman who wears it."
-          </h2>
-          <p className="text-primary/80 tracking-widest uppercase text-sm font-medium">Paloma Picasso</p>
-        </div>
-      </section>
+<section
+  className="relative py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center"
+  style={{
+    backgroundImage: "url('/background.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
 
+  {/* Content */}
+  <div className="relative max-w-3xl mx-auto text-white z-10">
+    <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-8">
+      "A perfume is like a piece of clothing, a message, a way of presenting oneself, 
+      a costume that differs according to the woman who wears it."
+    </h2>
+    <p className="tracking-widest uppercase text-sm font-medium text-amber-300">
+      Paloma Picasso
+    </p>
+  </div>
+</section>
 
 
 
@@ -33,7 +49,7 @@ export default function About() {
           
           <div className="text-center mb-16">
             <div className="flex flex-col items-center mb-12">
-              <img src={logoImg} alt="Rare Pheromone Logo" className="h-32 w-auto mb-6 invert dark:invert-0 animate-in fade-in zoom-in duration-1000" />
+              <img src={logoImg} alt="Rare Pheromone Logo" className="h-40 w-auto mb-6 dark:invert-0 animate-in  zoom-in duration-1000" />
               <h2 className="font-sans text-[12px] tracking-[0.6em] text-primary font-bold uppercase">
                 Rare Pheromone
               </h2>
@@ -47,7 +63,7 @@ export default function About() {
 
           <div className="aspect-[21/9] w-full overflow-hidden mb-16">
             <img 
-              src={heroImg} 
+              src={Image} 
               alt="Aura Perfumery Studio" 
               className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000"
             />
