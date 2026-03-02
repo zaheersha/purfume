@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { featuredPerfumes, newArrivals } from "@/lib/data";
 import { PerfumeCard } from "@/components/PerfumeCard";
-import heroImg from "../assets/images/IMG2.jpg";
+import heroImg from "../assets/images/image.png";
 import { ArrowRight } from "lucide-react";
 import Testimonials from "@/components/Testimonials";
 import FloatingActions from "@/components/FloatingActions";
 import DiscountPopup from "@/components/DiscountPopup";
-
+import backgroundImg from "../assets/images/background.png";
 
 export default function Home() {
   return (
@@ -16,11 +16,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src={"https://png.pngtree.com/thumb_back/fw800/background/20231020/pngtree-natural-perfume-essence-embracing-nature-s-fragrance-against-dark-textured-backdrop-image_13684960.png"} 
-            alt="Rare Pheromone Luxury Collection" 
-            className="w-full h-full object-cover scale-110 blur-[2px] opacity-40 md:opacity-100 md:blur-0 md:scale-100 transition-all duration-1000"
-          />
+   <img 
+  src={heroImg} 
+  alt="Rare Pheromone Luxury Collection" 
+  className="w-full h-full object-cover object-right brightness-100 contrast-110 md:scale-100 transition-all duration-1000"
+/>
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
         </div>
         
@@ -87,15 +87,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Philosophy Banner */}
-      <section className="bg-foreground text-background py-24 px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-8">
-            "A perfume is like a piece of clothing, a message, a way of presenting oneself, a costume that differs according to the woman who wears it."
-          </h2>
-          <p className="text-primary/80 tracking-widest uppercase text-sm font-medium">Paloma Picasso</p>
-        </div>
-      </section>
+ {/* Philosophy Banner */}
+<section
+  className="relative py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center"
+  style={{
+    backgroundImage: "url('/background.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
+
+  {/* Content */}
+  <div className="relative max-w-3xl mx-auto text-white z-10">
+    <h2 className="font-serif text-3xl md:text-5xl leading-tight mb-8">
+      "A perfume is like a piece of clothing, a message, a way of presenting oneself, 
+      a costume that differs according to the woman who wears it."
+    </h2>
+    <p className="tracking-widest uppercase text-sm font-medium text-amber-300">
+      Paloma Picasso
+    </p>
+  </div>
+</section>
 
       {/* New Arrivals Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-24">

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
+import heroImg from "../assets/images/image.png";
 
 export default function DiscountPopup() {
   const [open, setOpen] = useState(false);
@@ -31,7 +32,7 @@ export default function DiscountPopup() {
 
         {/* Image Banner */}
         <img
-          src="https://png.pngtree.com/thumb_back/fw800/background/20231020/pngtree-natural-perfume-essence-embracing-nature-s-fragrance-against-dark-textured-backdrop-image_13684960.png"
+          src={heroImg}
           alt="Discount Offer"
           className="w-full h-[200px] sm:h-[260px] object-cover"
         />
