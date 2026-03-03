@@ -6,7 +6,7 @@ import FloatingActions from "@/components/FloatingActions";
 export default function Contact() {
  const handleWhatsApp = () => {
   const message = "Hi, I want to know more about the perfume. Can you let me know more about it?";
-  const url = `https://wa.me/919494333702?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/916303914124?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 };
 
