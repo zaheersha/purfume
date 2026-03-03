@@ -12,7 +12,8 @@ export type Perfume = {
   id: string;
   name: string;
   brand: string;
-  price: number;
+  price: number;        // Actual price
+  actualprice: number;  // Offer price
   gender: 'Men' | 'Women' | 'Unisex';
   type: 'Floral' | 'Woody' | 'Citrus' | 'Spicy' | 'Fresh' | 'Sweet';
   notes: string[];
