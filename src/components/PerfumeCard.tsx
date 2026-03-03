@@ -24,7 +24,9 @@ Is it available? Please share more details.`;
 
   window.open(url, "_blank");
 };
-
+const discountPercentage = Math.round(
+  ((perfume.price - perfume.actualprice) / perfume.price) * 100
+);
   return (
     <Card className="overflow-hidden border-border/40 hover:border-primary/30 transition-all duration-500 group bg-card shadow-sm hover:shadow-xl hover:-translate-y-1">
       <div className="relative aspect-[4/5] overflow-hidden bg-muted">
@@ -51,7 +53,22 @@ Is it available? Please share more details.`;
               {perfume.name}
             </h3>
           </div>
-          <span className="font-serif text-lg text-primary whitespace-nowrap">₹{perfume.price.toLocaleString('en-IN')}</span>
+<div className="text-right">
+  {/* Offer Price */}
+  <p className="font-serif text-lg text-primary whitespace-nowrap">
+    ₹{perfume.actualprice.toLocaleString('en-IN')}
+  </p>
+
+  {/* Actual Price (Striked) */}
+  <p className="text-sm text-muted-foreground line-through">
+    ₹{perfume.price.toLocaleString('en-IN')}
+  </p>
+
+  {/* Discount Badge */}
+  <p className="text-xs text-green-600 font-medium">
+    {discountPercentage}% OFF
+  </p>
+</div> 
         </div>
         
         <p className="text-sm text-muted-foreground line-clamp-2 mt-3 mb-4 font-light leading-relaxed">
