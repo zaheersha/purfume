@@ -68,7 +68,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-foreground mb-1">Email</h3>
                   <p className="text-muted-foreground font-light text-sm mb-2">For general inquiries and press.</p>
-                  <a href="mailto:hello@auraperfumes.com" className="text-primary hover:underline font-medium">rarepheromone007@gmail.com</a>
+                  <a href="rarepheromone007@gmail.com" className="text-primary hover:underline font-medium">rarepheromone007@gmail.com</a>
                 </div>
               </CardContent>
             </Card>
