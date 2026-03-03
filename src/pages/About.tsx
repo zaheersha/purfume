@@ -64,7 +64,7 @@ export default function About() {
           <div className="aspect-[21/9] w-full overflow-hidden mb-16">
             <img 
               src={Image} 
-              alt="Aura Perfumery Studio" 
+              alt="Rare Pheromone Studio" 
               className="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000"
             />
           </div>
@@ -73,7 +73,7 @@ export default function About() {
             <div>
               <h2 className="font-serif text-3xl mb-6 text-foreground">The Vision</h2>
               <p className="text-muted-foreground font-light leading-relaxed mb-6">
-                Aura was born from a desire to demystify the world of fine fragrances. We believe that a signature scent is an invisible yet powerful extension of your personality.
+                Rare Pheromone was born from a desire to demystify the world of fine fragrances. We believe that a signature scent is an invisible yet powerful extension of your personality.
               </p>
               <p className="text-muted-foreground font-light leading-relaxed">
                 By stripping away the unnecessary and focusing purely on the quality of ingredients, we've created a collection that speaks directly to the senses without the traditional retail markup.
