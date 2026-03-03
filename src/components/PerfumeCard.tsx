@@ -9,7 +9,7 @@ interface PerfumeCardProps {
 
 export function PerfumeCard({ perfume }: PerfumeCardProps) {
 const handleOrder = () => {
-  const phoneNumber = "919494333702";
+  const phoneNumber = "916303914124";
 
   const message = `Hi,
 I want to order this perfume:
