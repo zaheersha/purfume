@@ -68,7 +68,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-foreground mb-1">Email</h3>
                   <p className="text-muted-foreground font-light text-sm mb-2">For general inquiries and press.</p>
-                  <a href="mailto:hello@auraperfumes.com" className="text-primary hover:underline font-medium">hello@RAREPHEROMONE.com</a>
+                  <a href="mailto:hello@auraperfumes.com" className="text-primary hover:underline font-medium">rarepheromone007@gmail.com</a>
                 </div>
               </CardContent>
             </Card>
@@ -79,8 +79,9 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-foreground mb-1">Studio Address</h3>
                   <p className="text-muted-foreground font-light text-sm">
-                    123 Fragrance Lane<br />
-                    Boutique District, NY 10001
+                    ngo colony ,near more supermarket,<br />
+                    kadapa pincode-516002
+Andhra pradesh
                   </p>
                 </div>
               </CardContent>
@@ -92,8 +93,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-medium text-foreground mb-1">Operating Hours</h3>
                   <p className="text-muted-foreground font-light text-sm">
-                    Monday - Friday: 9am - 6pm EST<br />
-                    Weekend: 10am - 4pm EST
+                    Monday - Friday: 9am - 8pm IST<br />
+                    Weekend: 10am - 6pm IST
                   </p>
                 </div>
               </CardContent>
