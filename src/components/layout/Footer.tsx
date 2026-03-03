@@ -38,8 +38,8 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-lg mb-4 text-primary-foreground/90">Contact</h4>
             <ul className="space-y-3 text-sm font-light text-muted">
-              <li>info@RarePheromone.com</li>
-              <li>+1 (555) 123-4567</li>
+              <li>rarepheromone007@gmail.com</li>
+              <li>+91 6303914124</li>
               <li className="pt-4 flex gap-4">
                 <a href="#" className="hover:text-background transition-colors" aria-label="Instagram"><Instagram className="h-5 w-5" /></a>
                 <a href="#" className="hover:text-background transition-colors" aria-label="Facebook"><Facebook className="h-5 w-5" /></a>
