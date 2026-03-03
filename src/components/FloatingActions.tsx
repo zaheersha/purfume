@@ -22,7 +22,7 @@ export default function FloatingActions() {
   };
 
   const openWhatsapp = () => {
-    const phone = "919494333702";
+    const phone = "916303914124";
     const message = "Hi, I need help regarding perfumes.";
     window.open(
       `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
