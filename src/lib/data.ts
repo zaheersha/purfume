@@ -1,3 +1,4 @@
+import p11Img from "../assets/images/IMG1.jpg";
 import p1Img from "../assets/images/IMG2.jpg";
 import p2Img from "../assets/images/IMG3.jpg";
 import p3Img from "../assets/images/IMG4.jpg";
@@ -32,7 +33,7 @@ export const perfumes: Perfume[] = [
     type: "Fresh",
     notes: ["Fruity", "Citrus"],
     description: "A breath of crisp mountain air captured in a bottle. Pure, cool, and invigorating.",
-    imageUrl: img
+    imageUrl: p11Img
   },
   {
     id: "p2",
@@ -80,7 +81,7 @@ export const perfumes: Perfume[] = [
     type: "Sweet",
     notes: ["Floral (max white lilly)", "Vanilla"],
     description: "A vibrant explosion of tropical fruits that brings sunshine to every moment.",
-    imageUrl: p5Img
+    imageUrl: p1Img
   },
   {
     id: "p6",
@@ -92,7 +93,7 @@ export const perfumes: Perfume[] = [
     type: "Fresh",
     notes: ["Fruity", "Citrus"],
     description: "The original fresh scent that redefined masculine elegance.",
-    imageUrl: img
+    imageUrl: p11Img
   }
 ];
 
