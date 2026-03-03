@@ -2,7 +2,7 @@ import p11Img from "../assets/images/IMG1.jpg";
 import p1Img from "../assets/images/IMG2.jpg";
 import p2Img from "../assets/images/IMG3.jpg";
 import p3Img from "../assets/images/IMG4.jpg";
-import p4Img from "../assets/images/IMG5.jpg";
+import p4Img from "../assets/images/velvetnotes.jpeg";
 import p5Img from "../assets/images/IMG6.jpg";
 import p6Img from "../assets/images/IMG7.jpg";
 
