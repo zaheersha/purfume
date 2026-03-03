@@ -51,14 +51,14 @@ Is it available? Please share more details.`;
               {perfume.name}
             </h3>
           </div>
-<div className="flex items-center gap-3 whitespace-nowrap">
-  {/* Actual Price - Red & Striked */}
-  <span className="text-sm text-red-500 line-through font-medium">
+<div className="flex items-center gap-3 whitespace-nowrap font-serif">
+  {/* Actual Price - Black text, Red strike */}
+  <span className="text-sm text-black line-through decoration-red-500 decoration-2">
     ₹{perfume.price.toLocaleString('en-IN')}
   </span>
 
-  {/* Final Offer Price */}
-  <span className="font-serif text-lg text-primary">
+  {/* Final Price - Black */}
+  <span className="text-lg font-semibold text-black">
     ₹{perfume.actualprice.toLocaleString('en-IN')}
   </span>
 </div>
