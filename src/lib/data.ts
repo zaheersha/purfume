@@ -89,7 +89,7 @@ export const perfumes: Perfume[] = [
     brand: "Rare Pheromone",
     price: 599,
     actualprice: 499,
-    gender: "Men",
+    gender: "Unisex",
     type: "Fresh",
     notes: ["Fruity", "Citrus"],
     description: "The original fresh scent that redefined masculine elegance.",
