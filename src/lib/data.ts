@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import p11Img from "../assets/images/IMG1.jpg";
-import p1Img from "../assets/images/IMG2.jpg";
-import p2Img from "../assets/images/IMG3.jpg";
-import p3Img from "../assets/images/IMG4.jpg";
-import p4Img from "../assets/images/velvetnotes.jpeg";
-import p5Img from "../assets/images/IMG6.jpg";
-import p6Img from "../assets/images/IMG7.jpg";
-=======
 // =======================
 // ALPINE GLACIER
 // =======================
@@ -16,7 +7,6 @@ import alpineDum2 from "../assets/images/img/Alpine Glacier/dum (2).jpeg";
 import alpineDum3 from "../assets/images/img/Alpine Glacier/dum (3).jpeg";
 import alpineDum4 from "../assets/images/img/Alpine Glacier/dum (4).jpeg";
 import alpineLast from "../assets/images/img/Alpine Glacier/last.jpeg";
->>>>>>> a7fe0a0 (Updated perfume gallery and carousel)
 
 // =======================
 // DUSKY DOG
@@ -133,16 +123,11 @@ export type Perfume = {
   id: string;
   name: string;
   brand: string;
-<<<<<<< HEAD
-  price: number;        // Actual price
-  actualprice: number;  // Offer price
-  gender: 'Men' | 'Women' | 'Unisex';
-  type: 'Floral' | 'Woody' | 'Citrus' | 'Spicy' | 'Fresh' | 'Sweet';
-=======
   price: number;
+  actualprice: number;
+
   gender: "Men" | "Women" | "Unisex";
   type: "Floral" | "Woody" | "Citrus" | "Spicy" | "Fresh" | "Sweet";
->>>>>>> a7fe0a0 (Updated perfume gallery and carousel)
   notes: string[];
   description: string;
   imageUrl: string;
@@ -152,61 +137,30 @@ export type Perfume = {
 export const perfumes: Perfume[] = [
   {
     id: "p1",
-    name: "Fruity Paradise",
+    name: "Alpine Glacier",
     brand: "Rare Pheromone",
-<<<<<<< HEAD
-    price: 599,
-    actualprice: 499,
-    gender: "Unisex",
-    type: "Fresh",
-    notes: ["Fruity", "Citrus"],
-    description: "A breath of crisp mountain air captured in a bottle. Pure, cool, and invigorating.",
-    imageUrl: p11Img
-=======
     price: 2499,
+    actualprice:499,
     gender: "Men",
     type: "Fresh",
     notes: ["Mint", "Ice Water", "White Musk"],
     description: "A refreshing fragrance inspired by snow-covered mountain peaks.",
     imageUrl: alpineFirst,
     gallery: [alpineFirst, alpineDum1, alpineDum2, alpineDum3, alpineDum4, alpineLast],
->>>>>>> a7fe0a0 (Updated perfume gallery and carousel)
   },
 
   {
     id: "p2",
     name: "Dusky Dog",
-<<<<<<< HEAD
-    brand: "Rare Pheromone",
-    price: 599,
-    actualprice: 499,
-    gender: "Unisex",
-    type: "Floral",
-    notes: ["Fresh Aqua", "Mint"],
-    description: "An enchanting bouquet of rare blossoms that radiates elegance and charm.",
-    imageUrl: p2Img
-  },
-  {
-    id: "p3",
-    name: "Alpine Glacier",
-    brand: "Rare Pheromone",
-    price: 599,
-    actualprice: 499,
-    gender: "Unisex",
-    type: "Woody",
-    notes: ["Citrus", "Woody"],
-    description: "Sophisticated and earthy. A scent that commands presence with subtle strength.",
-    imageUrl: p3Img
-=======
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Men",
     type: "Woody",
     notes: ["Leather", "Cedarwood", "Black Pepper"],
     description: "A strong masculine fragrance with deep woody character.",
     imageUrl: duskyFirst,
     gallery: [duskyFirst, duskyDum1, duskyDum2, duskyDum3, duskyDum4, duskyDum5, duskyLast],
->>>>>>> a7fe0a0 (Updated perfume gallery and carousel)
   },
 
   {
@@ -214,6 +168,7 @@ export const perfumes: Perfume[] = [
     name: "Endless Blue",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Men",
     type: "Fresh",
     notes: ["Sea Breeze", "Amber", "Musk"],
@@ -227,6 +182,7 @@ export const perfumes: Perfume[] = [
     name: "Fruity Paradise",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Unisex",
     type: "Sweet",
     notes: ["Peach", "Mango", "Passion Fruit"],
@@ -240,6 +196,7 @@ export const perfumes: Perfume[] = [
     name: "Kings Secret",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Men",
     type: "Spicy",
     notes: ["Cardamom", "Amber", "Oud"],
@@ -253,6 +210,7 @@ export const perfumes: Perfume[] = [
     name: "Pattel Vally",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Men",
     type: "Fresh",
     notes: ["Lavender", "Bergamot", "Musk"],
@@ -266,6 +224,7 @@ export const perfumes: Perfume[] = [
     name: "Rare Bloom",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Women",
     type: "Floral",
     notes: ["Rose", "Peony", "Jasmine"],
@@ -279,6 +238,7 @@ export const perfumes: Perfume[] = [
     name: "Royal Jasmine",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Women",
     type: "Floral",
     notes: ["Jasmine", "White Flowers", "Vanilla"],
@@ -292,6 +252,8 @@ export const perfumes: Perfume[] = [
     name: "Royal Pheromone",
     brand: "Rare Pheromone",
     price: 2999,
+    actualprice:499,
+
     gender: "Unisex",
     type: "Sweet",
     notes: ["Amber", "Vanilla", "Musk"],
@@ -305,6 +267,7 @@ export const perfumes: Perfume[] = [
     name: "Sapphire Musk",
     brand: "Rare Pheromone",
     price: 2499,
+    actualprice:499,
     gender: "Unisex",
     type: "Fresh",
     notes: ["Blue Musk", "Amber", "Lavender"],
@@ -317,41 +280,8 @@ export const perfumes: Perfume[] = [
     id: "p11",
     name: "Velvet Notes",
     brand: "Rare Pheromone",
-<<<<<<< HEAD
-    price: 599,
-    actualprice: 499,
-    gender: "Unisex",
-    type: "Sweet",
-    notes: ["Citrus", "Woody", "fruity-pineapple"],
-    description: "Smooth as velvet, sweet as a dream. A luxuriously comforting fragrance.",
-    imageUrl: p4Img
-  },
-  {
-    id: "p5",
-    name: "Rare Bloom",
-    brand: "Rare Pheromone",
-    price: 599,
-    actualprice: 499,
-    gender: "Women",
-    type: "Sweet",
-    notes: ["Floral (max white lilly)", "Vanilla"],
-    description: "A vibrant explosion of tropical fruits that brings sunshine to every moment.",
-    imageUrl: p1Img
-  },
-  {
-    id: "p6",
-    name: "Fruity Paradise",
-    brand: "Rare Pheromone",
-    price: 599,
-    actualprice: 499,
-    gender: "Unisex",
-    type: "Fresh",
-    notes: ["Fruity", "Citrus"],
-    description: "The original fresh scent that redefined masculine elegance.",
-    imageUrl: p11Img
-  }
-=======
     price: 2499,
+    actualprice:499,
     gender: "Women",
     type: "Sweet",
     notes: ["Vanilla", "Orchid", "Sandalwood"],
@@ -359,7 +289,6 @@ export const perfumes: Perfume[] = [
     imageUrl: velvetFirst,
     gallery: [velvetFirst, velvetDum1, velvetDum2, velvetDum3, velvetDum4, velvetDum5, velvetDum6, velvetDum7, velvetLast],
   },
->>>>>>> a7fe0a0 (Updated perfume gallery and carousel)
 ];
 
 export const featuredPerfumes = perfumes.slice(0, 4);
