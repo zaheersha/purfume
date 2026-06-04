@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Perfume } from "@/lib/data";
 
 interface PerfumeCardProps {
@@ -8,77 +10,166 @@ interface PerfumeCardProps {
 }
 
 export function PerfumeCard({ perfume }: PerfumeCardProps) {
-const handleOrder = () => {
-  const phoneNumber = "916303914124";
+  const [currentImage, setCurrentImage] = useState(0);
 
-  const message = `Hi,
+  const images =
+    perfume.gallery && perfume.gallery.length > 0
+      ? perfume.gallery
+      : [perfume.imageUrl];
+
+  const nextImage = () => {
+    setCurrentImage((prev) =>
+      prev === images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) =>
+      prev === 0 ? images.length - 1 : prev - 1
+    );
+  };
+
+  const handleOrder = () => {
+    const phoneNumber = "919494333702";
+
+    const message = `Hi,
+
 I want to order this perfume:
 
 ${perfume.name}
 Brand: ${perfume.brand}
-Price: ₹${perfume.actualprice.toLocaleString("en-IN")}
+Offer Price: ₹${perfume.actualprice.toLocaleString("en-IN")}
+
 Is it available? Please share more details.`;
 
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
 
-  window.open(url, "_blank");
-};
+    window.open(url, "_blank");
+  };
 
   return (
     <Card className="overflow-hidden border-border/40 hover:border-primary/30 transition-all duration-500 group bg-card shadow-sm hover:shadow-xl hover:-translate-y-1">
+
+      {/* IMAGE SECTION */}
       <div className="relative aspect-[4/5] overflow-hidden bg-muted">
-        <img 
-          src={perfume.imageUrl} 
-          alt={perfume.name} 
+        <img
+          src={images[currentImage]}
+          alt={perfume.name}
           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4 flex gap-2 flex-col items-start">
-          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm text-xs font-normal">
+
+        {/* LEFT ARROW */}
+        {images.length > 1 && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white rounded-full p-2 z-10 transition"
+          >
+            <ChevronLeft size={18} />
+          </button>
+        )}
+
+        {/* RIGHT ARROW */}
+        {images.length > 1 && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white rounded-full p-2 z-10 transition"
+          >
+            <ChevronRight size={18} />
+          </button>
+        )}
+
+        {/* DOTS */}
+        {images.length > 1 && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-300 rounded-full ${
+                  currentImage === index
+                    ? "w-5 h-2 bg-white"
+                    : "w-2 h-2 bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* BADGES */}
+        <div className="absolute top-4 left-4 flex flex-col gap-2">
+          <Badge
+            variant="secondary"
+            className="bg-background/80 backdrop-blur-sm text-xs"
+          >
             {perfume.gender}
           </Badge>
-          <Badge variant="outline" className="bg-background/80 backdrop-blur-sm border-primary/20 text-primary text-xs font-normal">
+
+          <Badge
+            variant="outline"
+            className="bg-background/80 backdrop-blur-sm border-primary/20 text-primary text-xs"
+          >
             {perfume.type}
           </Badge>
         </div>
       </div>
-      
+
+      {/* CONTENT */}
       <CardContent className="p-6">
         <div className="flex justify-between items-start mb-2">
           <div>
-            <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">{perfume.brand}</p>
-            <h3 className="font-serif text-xl font-medium" data-testid={`text-perfume-name-${perfume.id}`}>
+            <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">
+              {perfume.brand}
+            </p>
+
+            <h3
+              className="font-serif text-xl font-medium"
+              data-testid={`text-perfume-name-${perfume.id}`}
+            >
               {perfume.name}
             </h3>
           </div>
-<div className="flex items-center gap-3 whitespace-nowrap font-serif">
-  {/* Actual Price - Black text, Red strike */}
-  <span className="text-sm text-black line-through decoration-red-500 decoration-2">
-    ₹{perfume.price.toLocaleString('en-IN')}
-  </span>
 
-  {/* Final Price - Black */}
-  <span className="text-lg font-semibold text-black">
-    ₹{perfume.actualprice.toLocaleString('en-IN')}
-  </span>
-</div>
+          {/* PRICE SECTION */}
+          <div className="flex flex-col items-end">
+            <span className="text-sm text-gray-500 line-through decoration-red-500 decoration-2">
+              ₹{perfume.price.toLocaleString("en-IN")}
+            </span>
+
+            <span className="font-serif text-xl font-semibold text-primary">
+              ₹{perfume.actualprice.toLocaleString("en-IN")}
+            </span>
+          </div>
         </div>
-        
+
         <p className="text-sm text-muted-foreground line-clamp-2 mt-3 mb-4 font-light leading-relaxed">
           {perfume.description}
         </p>
-        
+
         <div className="mb-6">
-          <p className="text-xs font-medium text-foreground mb-2">KEY NOTES:</p>
+          <p className="text-xs font-medium text-foreground mb-2">
+            KEY NOTES:
+          </p>
+
           <div className="flex flex-wrap gap-1.5">
             {perfume.notes.map((note) => (
-              <span key={note} className="text-xs px-2 py-1 bg-secondary rounded-sm text-secondary-foreground font-light">
+              <span
+                key={note}
+                className="text-xs px-2 py-1 bg-secondary rounded-sm text-secondary-foreground font-light"
+              >
                 {note}
               </span>
             ))}
           </div>
         </div>
-        
-        <Button 
+
+        <Button
           onClick={handleOrder}
           className="w-full bg-foreground text-background hover:bg-primary transition-colors h-12 text-sm tracking-wide uppercase"
           data-testid={`button-order-${perfume.id}`}
