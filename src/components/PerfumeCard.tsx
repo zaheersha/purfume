@@ -133,7 +133,7 @@ Is it available? Please share more details.`;
               data-testid={`text-perfume-name-${perfume.id}`}
             >
               {perfume.name}
-            </h3>
+            </h3>       
           </div>
 
           {/* PRICE SECTION */}
