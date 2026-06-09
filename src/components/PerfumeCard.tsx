@@ -30,7 +30,7 @@ export function PerfumeCard({ perfume }: PerfumeCardProps) {
   };
 
   const handleOrder = () => {
-    const phoneNumber = "91";
+    const phoneNumber = "916303914124";
 
     const message = `Hi,
 
