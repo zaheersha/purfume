@@ -145,7 +145,7 @@ export const perfumes: Perfume[] = [
     actualprice:499,
     gender: "Unisex",
     type: "Fresh",
-    notes: ["Mint", "Ice Water", "White Musk"],
+    notes: ["Citrus", "Woody", "Cool"],
     description: "A refreshing fragrance inspired by snow-covered mountain peaks.",
     imageUrl: alpineFirst,
     gallery: [alpineFirst, alpineDum1, alpineDum2, alpineDum3, alpineDum4, alpineDum5, alpineLast],
